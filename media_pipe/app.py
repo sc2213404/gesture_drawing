@@ -1,4 +1,3 @@
-# app.py
 
 from flask import Flask, render_template
 from flask_socketio import SocketIO, join_room, leave_room
