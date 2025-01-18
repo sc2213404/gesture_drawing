@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手势绘画应用</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <!-- Hidden video for capturing frames -->
+    <video id="video-capture" style="display:none;" autoplay></video>
+    <!-- Floating video window -->
+    <video id="video-floating" width="300" height="225" autoplay></video>
+    <div id="canvas-container">
+        <canvas id="canvas" width="1000" height="750"></canvas>
+    <!-- 图标部分 -->
+        <div id="toolbar">
+            <img id="eraser-icon" src="../static/img/icons8-rubber-50.png" alt="Eraser">
+            <img id="pen-icon" src="../static/img/icons8-pen-50.png" alt="Pen">
+        </div>
+            <!-- 画笔设置面板 -->
+    <div id="brush-settings" style="display:none;">
+        <label>选择粗细:</label>
+        <select id="brush-width">
+            <option value="2">细</option>
+            <option value="5">中细</option>
+            <option value="8">中</option>
+            <option value="12">中粗</option>
+            <option value="16">粗</option>
+        </select>
+        <label>选择颜色:</label>
+        <div id="color选择">
+            <div class="color-option" style="background-color: red;" data-color="red"></div>
+            <div class="color-option" style="background-color: blue;" data-color="blue"></div>
+            <div class="color-option" style="background-color: green;" data-color="green"></div>
+            <div class="color-option" style="background-color: black;" data-color="black"></div>
+            <div class="color-option" style="background-color: yellow;" data-color="yellow"></div>
+        </div>
+    </div>
+    </div>
+    <div id="cursor"></div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
